@@ -1,0 +1,43 @@
+
+
+/* .businesstable
+{display: none;} */
+
+/* .reslink a {background-color: grey;
+color: white;} */
+
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+background-image: url("../images/background.jpg");
+  height: 100vh;
+}
+
+
+
+
+footer
+{position:fixed;
+height:50px;
+background-color:rgba(175, 14, 41, 1);
+bottom:0px;
+left:0px;
+right:0px;
+margin-bottom:0px;
+text-align: center;
+color: white;
+}
+
+.btn-primary:hover {background-color: green; }
+.btn-success {background-color: red; border: none;}
+.btn-primary{margin: 0 1em; background-color: rgba(175, 14, 41, 1); border-color: black;}
+
+/* Specific Bootstrap table styling */
+.table td  {   background-color: rgba(255,255,255,0.5);}
+.table th {background-color: rgba(175, 14, 41, 1)}
+.bizname, .biztype {color: white;}
+
+#example_filter.dataTables_filter  {text-align: left;}
+#example_filter.dataTables_filter label {font-weight: bold;}
+.page-item.active .page-link  {background-color: rgba(175, 14, 41, 1); border-color: black;}

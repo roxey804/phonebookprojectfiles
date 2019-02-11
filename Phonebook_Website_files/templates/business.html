@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">☎️Phonebook📞</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item active"> -->
+            <a class="nav-link" href="/">Home
+
+            </a>
+          <!-- </li> -->
+          <li class="nav-item active">
+
+            <a class="nav-link" id="bizlink" href="/business">Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="reslink" href="/residential">Residential</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Business Listings</h1>
+          <h2>Do you want to search by Business Type or Name?</h2>
+          <p class="lead">Please select the directory you would like to search:</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+      <form class="" action="/business" method="post">
+        <select name="businesschoice">
+          <option value="type">Business Type</option>
+          <option value="name">Business Name</option>
+        </select>
+
+        <button type="submit" class="btn btn-success">Go</button>
+      </form>
+    </div>
+  </div>
+
+  {% if results %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          <p class="lead">There are <strong> {{length}} </strong>results found for your query:</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="businesstable">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class="bizname">Business Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Town</th>
+          <th scope="col">Region</th>
+          <th scope="col">Postcode</th>
+          <th scope="col">Country</th>
+          <th scope="col">Phone number</th>
+          <th scope="col" class="biztype">Business Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for res in results %}
+        <tr>
+          <td>{{ res[0] }}</td>
+          <td>{{ res[1] }}</td>
+          <td>{{ res[2] }}</td>
+          <td>{{ res[3] }}</td>
+          <td>{{ res[4] }}</td>
+          <td>{{ res[5] }}</td>
+          <td>{{ res[6] }}</td>
+          <td>{{ res[7] }}</td>
+          <td>{{ res[8] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

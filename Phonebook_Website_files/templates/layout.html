@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Phoneboook</title>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+ <!-- Bootstrap core CSS -->
+
+ <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/style.css") }}">
+
+</head>
+
+
+  {% block content %}
+  <!-- on other pages will be displayed here-->
+
+  {% endblock %}
+
+
+
+<footer>
+<p>
+A project developed by Roksana and Tilly as part of the BT FurtHER programme 2018-19.
+  Tools and technologies used: HTML5, CSS3+Bootstrap 4, JavaScript, SQLite3 and Python.
+</p>
+</footer>
+    <!-- Bootstrap core CSS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#example').DataTable();
+      });
+    </script>
+
+</body>
+
+</html>

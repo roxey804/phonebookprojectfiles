@@ -141,20 +141,7 @@ def sort_business_type():
     c = conn.cursor()
     c.execute('SELECT * FROM Business ORDER BY business_category')
     business_type_results = c.fetchall()
-    catlen=(len(business_type_results))
     return business_type_results
-
-def sort_business_category():
-    conn = sqlite3.connect("phonebook_project.db")
-    c = conn.cursor()
-    c.execute('SELECT * FROM Business ORDER BY business_category')
-    business_category_results = c.fetchall()
-    catlen=(len(business_category_results))
-    return catlen
-#    for i in range(len(business_category_results)):
-#        print (business_category_results[i][7])
-        
-#sort_business_category()
         
 def sort_business_name():
     conn = sqlite3.connect("phonebook_project.db")
